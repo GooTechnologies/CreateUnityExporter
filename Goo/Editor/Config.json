@@ -1,0 +1,225 @@
+{
+	"exporterComment": "this is the name of your Exporter class",
+	"exporter": "GooExporter",
+
+	"convertersComment": "this is where you map Unitys components to your converter classes",
+	"converters": {
+		"MeshRenderer": 		"GLexMeshRenderer",
+		"SkinnedMeshRenderer": 	"GooSkinnedMeshRenderer",
+		"Transform": 			"GLexTransform",
+		"Camera": 				"GLexCamera",
+		"Light": 				"GLexLight",
+		"Animation": 			"GLexAnimation",
+		"GooRotator": 			"GooRotator",
+		"AudioSource":		  "GLexAudioSource"
+	},
+
+	"templatesComment": "this is a map for the templates you like to load in your Exporter class",
+	"templates": {
+		"scene": 			"scene",
+		"group": 			"group",
+		"mesh":  			"mesh",
+		"material": 		"material",
+		"animation": 		"animation",
+		"animationClip": 	"animationClip",
+		"animationState":	"animationState",
+		"entity": 			"entity",
+		"texture": 			"texture",
+		"shader": 			"shader",
+		"shaderVertex": 	"shaderVertex",
+		"shaderFragment": 	"shaderFragment",
+		"skeleton": 		"skeleton",
+		"project":			"project",
+		"sound":			"sound",
+	},
+
+	"settings": {
+		"scale": 					1.0,
+		"jpegQuality": 				90,
+		"highPrecision": 			"0.########",
+		"mediumPrecision": 			"0.#####",
+		"lowPrecision": 			"0.##",
+		"bakeAnimationInterval":	0.05
+	},
+
+	"options": {
+		"bakeAnimations": 				false,
+		"recurseInactivesChildren": 	true,
+		"exportSceneGameObject":    	false,
+		"exportBoneAsGameObject": 		true,
+		"exportLeafWithOnlyTransform": 	true,
+		"cameraCanHaveParent":      	false,
+		"setUniqueNames": 				true,
+		"removeSpacesInNames": 			true,
+		"lowerCaseNames": 				false,
+		"addSceneNameToPath": 			true,
+		"freezeRotation": 				false,
+		"freezeScale": 					false,
+		"exportBinary": 				true
+	},
+
+	"uniformComment": "these are the uniforms (and their type) that each shader is being checked for",
+	"uniforms": {
+		"materialAmbient": 			"color32",
+		"materialDiffuse": 			"color32",
+		"materialEmissive": 		"color32",
+		"materialSpecular": 		"color32",
+		"materialSpecularPower": 	"float",
+		"opacity": 					"float"
+	},
+
+	"textureUniformsComment": "these are the texture samplers each shader is being checked for",
+	"textureUniforms": {
+		"diffuse": 		"_MainTex",
+		"normal": 		"normalMap",
+		"specular": 	"specularMap",
+		"emissive": 	"emissiveMap",
+		"AO": 			"AOMap",
+		"height": 		"NA",
+		"bump": 		"NA",
+		"flow": 		"NA",
+		"light": 		"lightMap"
+	},
+
+	"valueTransformComment": "These are used to transform values. The m_LocalSomething are for animations and tx, rx and sx are for position, rotation (quaternion) and scale. Note that you can use these to scale your world, for example",
+	"valueTransform": {
+		"m_LocalPosition.x": 1,
+		"m_LocalPosition.y": 1,
+		"m_LocalPosition.z": -1,
+		"m_LocalRotation.x": 1,
+		"m_LocalRotation.y": 1,
+		"m_LocalRotation.z": -1,
+		"m_LocalRotation.w": -1,
+		"tx": 1,
+		"ty": 1,
+		"tz": -1,
+		"rx": 1,
+		"ry": 1,
+		"rz": -1,
+		"rw": -1,
+		"sx": 1,
+		"sy": 1,
+		"sz": 1
+	},
+
+	"renderQueueTransformComment": "the render queue in Unity is a number, these values are for offsetting and factor that value (yourValue=offset+unityRenderQueue*factor)",
+	"renderQueueTransform": {
+		"offset": -1000,
+		"factor": 1
+	},
+
+	"wrapModeTransformComment": "Texture wrap transform map",
+	"wrapModeTransform": {
+		"Clamp": "EdgeClamp",
+		"Repeat": "Repeat"
+	},
+
+	"textureFilterTransformComment": "Texture filter transform map",
+	"textureFilterTransform": {
+		"NEAREST": 					"NearestNeighbor",
+		"LINEAR": 					"Bilinear",
+    	"NEAREST_MIPMAP_NEAREST": 	"NearestNeighborNearestMipMap",
+    	"LINEAR_MIPMAP_NEAREST": 	"NearestNeighborLinearMipMap",
+		"NEAREST_MIPMAP_LINEAR": 	"BilinearNearestMipMap",
+    	"LINEAR_MIPMAP_LINEAR": 	"Trilinear"
+    },
+
+    "lightTypeTransformComment": "Light type transform map",
+    "lightTypeTransform": {
+    	"Point": 		"PointLight",
+    	"Area": 		"DirectionalLight",
+    	"Spot": 		"SpotLight",
+    	"Directional":  "DirectionalLight"
+    },
+
+    "animationPropertyTransformComment": "Animation property transform map",
+    "animationPropertyTransform": {
+		"m_LocalRotation.x": "rotationX",
+		"m_LocalRotation.y": "rotationY",
+		"m_LocalRotation.z": "rotationZ",
+		"m_LocalRotation.w": "rotationW",
+		"m_LocalPosition.x": "positionX",
+		"m_LocalPosition.y": "positionY",
+		"m_LocalPosition.z": "positionZ"
+    },
+
+    "animationWrapModeTransformComment": "Animation wrap transform map",
+   	"animationWrapModeTransform": {
+   		"Clamp": 		"1",
+   		"ClampForever": "1",
+   		"Default": 		"-1",
+   		"Once": 		"1",
+   		"PingPong": 	"-1",
+   		"Loop": 		"-1"
+   	},
+
+   	"basePathsComment": "This is an array of export basepaths which the exporter will automagically export to if they exists and no file selector will come up",
+	"basePaths": [
+		"/SomeUserProjectDir/",
+		"/ThisPreventsFileSelector/",
+		"/SpeedingUpYourExportTime/"
+	],
+
+	"templatePathComment": "This is where all of your templates are located",
+	"templatePath": {
+		"relativeUnityProject": true,
+		"path": "/Goo/Editor/Templates/"
+	},
+
+	"assetPathsComment": "You could ofcourse hardcode these values into your Exporter class but it's nice to have them in a config",
+	"assetPaths": {
+		"scene": {
+			"path": "",
+			"extension": "scene"
+		},
+		"entity": {
+			"path": "",
+			"extension": "entity"
+		},
+		"mesh": {
+			"path": "",
+			"extension": "mesh"
+		},
+		"animation": {
+			"path": "",
+			"extension": "animation"
+		},
+		"animationClip": {
+			"path": "",
+			"extension": "clip"
+		},
+		"material": {
+			"path": "",
+			"extension": "material"
+		},
+		"texture": {
+			"path": "",
+			"extension": "texture"
+		},
+		"image": {
+			"path": "",
+			"extension": ""
+		},
+		"skeleton": {
+			"path": "",
+			"extension": "skeleton"
+		},
+		"binary": {
+			"path": "",
+			"extension": "bin"
+		},
+		"sound": {
+			"path": "",
+			"extension": "sound"
+		},
+		"animationState": {
+			"path": "",
+			"extension": "animstate"
+		}
+		"animationChannel": {
+			"path": "",
+			"extension": "channel"
+		}
+	}
+}
+

@@ -1,0 +1,14 @@
+$if(it.IsTransform)$
+$it:Transform()$$endif$
+$if(it.IsMeshRenderer)$
+$it:MeshRenderer()$$endif$
+$if(it.IsMeshFilter)$
+$it:MeshFilter()$$endif$
+$if(it.IsCamera)$
+$it:Camera()$$endif$
+$if(it.IsLight)$
+$it:Light()$$endif$
+$if(it.IsAudioSource)$
+$it:AudioSource()$$endif$
+$if(it.IsAnimation)$
+$it:AnimationComponent()$$endif$

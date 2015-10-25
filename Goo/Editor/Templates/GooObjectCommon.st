@@ -1,0 +1,7 @@
+"dataModelVersion": 2,
+"id": "$obj.Id$",
+"name": "$obj.Name$",
+"license": "$obj.License$",
+"created": "$obj.ExportDate$",
+"modified": "$obj.ExportDate$",
+"deleted": false,
